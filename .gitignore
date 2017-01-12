@@ -54,3 +54,8 @@ node_modules/
 # Files
 # --------------------
 files/
+
+# --------------------
+# Test purposes
+# --------------------
+coverage
