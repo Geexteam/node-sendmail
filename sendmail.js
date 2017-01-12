@@ -3,7 +3,7 @@ const {resolveMx} = require('dns');
 const {DKIMSign} = require('dkim-signer');
 const CRLF = '\r\n';
 
-const {getHost, groupRecipients} = require('./lib/helper');
+const {getHost, groupRecipients, getAddress, getAddresses} = require('./lib/helper');
 
 function dummy() {
 }
