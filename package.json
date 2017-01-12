@@ -17,15 +17,22 @@
   },
   "devDependencies": {
     "ical-toolkit": "^1.0.9",
-    "standard": "latest"
+    "standard": "latest",
+    "eslint": "^1.10.3",
+    "eslint-config-defaults": "^7.1.1",
+    "eslint-plugin-filenames": "^0.2.0",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "should": "^7.1.1",
+    "sinon": "^1.17.3"
   },
   "contributors": [
     "Gui Lin <guileen@gmail.com>",
     "Green Pioneer <info@greenpioneersolutions.com>"
   ],
   "scripts": {
-    "test": "npm run lint",
-    "lint": "node_modules/.bin/standard",
+    "test": "NODE_ENV=test ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- ./test/ --recursive",
+    "lint": "$(npm bin)/eslint .",
     "lint:fix": "node_modules/.bin/standard --fix"
   },
   "license": "MIT",
